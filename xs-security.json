@@ -1,0 +1,43 @@
+{
+  "xsappname": "soapproval",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.SO_MANAGER",
+      "description": "SO_MANAGER"
+    },
+    {
+      "name": "$XSAPPNAME.SO_EMPLOYEE",
+      "description": "SO_EMPLOYEE"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "SO_MANAGER",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.SO_MANAGER"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "SO_EMPLOYEE",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.SO_EMPLOYEE"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "authorities": [
+    "$ACCEPT_GRANTED_AUTHORITIES"
+  ],
+  "oauth2-configuration": {
+    "token-validity": 9000,
+    "redirect-uris": [
+      "https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
+    ]
+  },
+  "xsenableasyncservice": "true"
+}

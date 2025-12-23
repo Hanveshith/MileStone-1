@@ -1,0 +1,2 @@
+ID, salesOrderId, salesOrg, soldToParty, netValue, currency, createdAt, createdBy, modifiedAt, modifiedBy, approvalStatus
+44d60760-d645-45c5-afaf-ce1bc46a99ca,23,UST,1000000,INR,,,,,
