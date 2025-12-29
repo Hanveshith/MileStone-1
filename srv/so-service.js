@@ -50,8 +50,8 @@ module.exports = async (srv) => {
     srv.on('rejectSalesOrder', async(req) => {
         // console.log(req.params);
         const {SalesOrder} = req.params[0];
-        console.log(data);
         const data = await UPDATE.entity('SalesOrderApproval').set({approvalStatus: "Rejected"}).where({salesOrderId : SalesOrder});
+        // console.log(data);
         req.notify({message:  "Rejected"})
 
     })

@@ -6,10 +6,10 @@ define service SOService {
 
     entity localApprovalData as projection on so.SalesOrderApproval;
 
-    @restrict: [
-        {grant: ['READ','WRITE'], to : 'SO_MANAGER'},
-        {grant: ['READ'], to : 'SO_EMPLOYEE'}
-    ]
+    // @restrict: [
+    //     {grant: ['READ','WRITE'], to : 'SO_MANAGER'},
+    //     {grant: ['READ'], to : 'SO_EMPLOYEE'}
+    // ]
     entity A_SalesOrder      as
         projection on ZAPI_SALES_ORDER_SRV.A_SalesOrder {
             key SalesOrder,
